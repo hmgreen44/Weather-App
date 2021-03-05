@@ -28,11 +28,11 @@ function getWeather() {
             console.log(json);
             cityOutput.innerHTML = json.name;
 
-            outputK.innerHTML = Math.round(json.main.temp);
+            outputK.innerHTML = Math.round(json.main.temp) + '&deg K';
 
-            outputF.innerHTML = Math.round(((json.main.temp - 273.15) * 9 / 5) + 32)
+            outputF.innerHTML = Math.round(((json.main.temp - 273.15) * 9 / 5) + 32) + '&deg F'
 
-            outputC.innerHTML = Math.round(json.main.temp - 273.15);
+            outputC.innerHTML = Math.round(json.main.temp - 273.15) + '&deg C';
 
             let conditionOutput = json.weather[0].description;
             condOutput.innerHTML = conditionOutput;
